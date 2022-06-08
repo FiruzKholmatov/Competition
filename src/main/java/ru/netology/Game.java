@@ -35,12 +35,7 @@ public class Game {
             result = 2;
         }
 
-        if (findByName(playerName1) == null) {
-            throw new NotRegisteredException(
-                    "Player is NOT registered"
-            );
-        }
-        if (findByName(playerName2) == null) {
+        if (findByName(playerName1) == null || findByName(playerName2) == null) {
             throw new NotRegisteredException(
                     "Player is NOT registered"
             );
